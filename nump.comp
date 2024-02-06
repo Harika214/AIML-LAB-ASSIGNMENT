@@ -1,0 +1,11 @@
+import numpy as  np
+data1=np.array([50,55,60,65,70,75,80,85,90,95,100,105])
+data2=np.array([5,6,6.5,7,7.5,8,8.5,9,9.5,10,10.5,11])
+n=np.size(data1)
+x_bar=np.mean(data1)
+y_bar=np.mean(data2)
+cov=sum((data1-x_bar)*(data2-y_bar))/n
+v1=np.var(data1)
+v2=np.var(data2)
+correlation=cov/np.sqrt(v1*v2)
+print(round(correlation,3))
